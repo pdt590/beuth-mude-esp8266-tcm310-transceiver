@@ -1,21 +1,3 @@
-/*
-  EnOcean ESP3 Parser
-
-  This sketch gets the data of EnOcean radio telegram simply
-  using an EnOcean Shield (TCM410J) by SiMICS.
-
-  The circuit:
-  *Input PIN
-    RX:EnOcean (TCM410J)
-  *Output PIN
-    None
-
-  Created 1 May 2016
-  by LoonaiFactory
-
-  https://github.com/simics-co/EnOcean
-*/
-
 #include "Arduino.h"
 #include "SerialCommunication.h"
 #include "EnOceanProfile.h"

@@ -1,20 +1,3 @@
-/*
-  EnOcean Profile
-
-  This sketch converts the data of EnOcean radio telegram to the specific value.
-
-  The circuit:
-  *Input PIN
-    None
-  *Output PIN
-    None
-
-  Created 1 May 2016
-  by LoonaiFactory
-
-  https://github.com/simics-co/EnOcean
-*/
-
 #include "Arduino.h"
 #include "EnOceanProfile.h"
 

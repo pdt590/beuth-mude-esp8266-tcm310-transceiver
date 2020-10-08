@@ -1,23 +1,3 @@
-/*
-  Serial Communication
-
-  This sketch gets a serial byte data in interrupt processing.
-  If ISR(USART_RX_vect) is written in HardwareSerial0.cpp, comment out it.
-
-  The circuit:
-  *Input PIN
-    RX
-  *Output PIN
-    None
-
-  Created 1 May 2016
-  by LoonaiFactory
-  Modified (Added support for ESP8266) 12 July 2016
-  by LoonaiFactory
-
-  https://github.com/simics-co/EnOcean
-*/
-
 #ifndef ESP8266
   #include <avr/io.h>
   #include <avr/interrupt.h>

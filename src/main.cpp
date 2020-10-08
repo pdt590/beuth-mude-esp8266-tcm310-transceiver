@@ -1,21 +1,3 @@
-/*
-  Simple Display
-
-  This sketch displays the data of EnOcean radio telegram to serial console
-  using an EnOcean Shield (TCM410J) by SiMICS.
-
-  The circuit:
-  *Input PIN
-    RX:EnOcean (TCM410J)
-  *Output PIN
-    None
-
-  Created 1 May 2016
-  by LoonaiFactory
-
-  https://github.com/simics-co/EnOcean
-*/
-
 #include <Arduino.h>
 #include "ESP3Parser.h"
 
