@@ -1,9 +1,15 @@
+/*
+  ESP8266 UART0
+  - TXD0 (GPIO1) - Forward serial packet to PC
+  - RXD0 (GPIO3) - Receive enocean packet from TCM310
+*/
+
 #ifndef ESP8266
   #include <avr/io.h>
   #include <avr/interrupt.h>
 #endif
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "SerialCommunication.h"
 
 static uint8_t empty(char aChar)
@@ -26,11 +32,10 @@ static uint8_t state = 0;
         unsigned char c = USF(UART0) & 0xff;
         state = (pReceptOpeSet[state])(c);
       }
-      
     } else {
       // Overflow/Frame/Parity error, read byte but discard it
       unsigned char c = USF(UART0) & 0xff;
-      digitalWrite(14, 1);
+      digitalWrite(14, 1); // Indicator led
     }
     USIC((UART0)) = 0xff; /* Clear interrupt factor */
   }
@@ -68,7 +73,7 @@ void SerialCommunication::Initialization(void)
 
 #ifdef ESP8266
   pinMode(14, OUTPUT);
-  digitalWrite(14, 0);
+  digitalWrite(14, 0); // Indicator led
   
   USIE(UART0) = 0x00; /* Disable interrupt */
   USC1(UART0) = 1;    /* Rx fifo full threshold is 1 */

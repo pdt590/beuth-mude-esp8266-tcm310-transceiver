@@ -1,4 +1,4 @@
-#include "Arduino.h"
+#include <Arduino.h>
 #include "SerialCommunication.h"
 #include "EnOceanProfile.h"
 #include "ESP3Parser.h"

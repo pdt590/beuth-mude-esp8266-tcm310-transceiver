@@ -53,3 +53,8 @@ Comment out example:
     }
   #endif  // Add
 ```
+
+## TODO
+
+* Set UART0 to be only used for commucation with PC
+* Use each .cpp for each packet type
